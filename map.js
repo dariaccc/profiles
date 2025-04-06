@@ -1,9 +1,11 @@
 const link = "https://randomuser.me/api/?results=50";
 
+//declare global variables
 const lat_coord = [];
 const lng_coord = [];
 let img = [];
 
+//function to get the map api key (hidden in config.js)
 function loadMap(){
     const script = document.createElement("script");
     script.src = `https://maps.googleapis.com/maps/api/js?key=${API_KEY}&callback=getMap`;
@@ -14,8 +16,7 @@ function loadMap(){
 
 getCoord();
 
-console.log(API_KEY);
-
+//function to get the coordinates of the users through the randomuser API (nonsense values)
 function getCoord(){
     fetch(link)
 
@@ -39,12 +40,14 @@ function getCoord(){
             //add the image src to an array
             img.push(data.results[i].picture.thumbnail);
         }
+        //send values to the getmap function
         getMap(lat_coord, lng_coord, img);
     })
     
     .catch(error => console.log(error));
 }
 
+//function to create the map
 function getMap(){
     let map;
     //options for where the map starts

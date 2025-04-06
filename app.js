@@ -2,6 +2,7 @@ const link = "https://randomuser.me/api/?results=50";
 
 getData()
 
+//function to get the information of all the users from the random users api
 function getData(){
     fetch(link)
     .then(res => {
