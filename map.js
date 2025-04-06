@@ -4,7 +4,17 @@ const lat_coord = [];
 const lng_coord = [];
 let img = [];
 
+function loadMap(){
+    const script = document.createElement("script");
+    script.src = `https://maps.googleapis.com/maps/api/js?key=${API_KEY}&callback=getMap`;
+    script.async = true;
+    script.defer = true;
+    document.head.appendChild(script);
+}
+
 getCoord();
+
+console.log(API_KEY);
 
 function getCoord(){
     fetch(link)
