@@ -5,6 +5,10 @@ The project uses an API to generate "profile cards" with random users, displayin
 There is also a map function integrated, that shows the location of every user. Note that these locations are randomly generated, and most of them are therefore in odd places such as the middle of the ocean.
 For this the google maps API is used.
 
+#### Video demonstration:
+![Video demonstration](figures/profiles.mp4)
+
+
 #### Key functions:
 - Randomuser API
 - Google Maps API
